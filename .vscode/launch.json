@@ -1,0 +1,66 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "启动chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/frontend"
+        },
+        {
+            "name": "启动frontend",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev",
+                "--",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "5173",
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "cwd": "${workspaceFolder}/frontend"
+        },
+        {
+            "name": "Debug executable 'axum-test'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=axum-test"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'axum-test'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=axum-test"
+                ]
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "调试frontend",
+            "configurations": [
+                "启动frontend",
+                "启动chrome"
+            ]
+        }
+    ]
+}
