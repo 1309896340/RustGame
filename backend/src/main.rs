@@ -2,6 +2,7 @@ use tokio;
 
 mod router;
 mod model;
+mod service;
 
 use router::construct_router;
 

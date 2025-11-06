@@ -90,6 +90,12 @@ END;
 ```
 
 在rust中使用`rusqlite`进行数据库访问
+```rust
+use rusqlite::{params, Connection, Result};
+```
+
+使用`Connection::open()`打开指定的.db文件
+
 
 
 
