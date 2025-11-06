@@ -31,13 +31,13 @@
             "cwd": "${workspaceFolder}/frontend"
         },
         {
-            "name": "Debug executable 'axum-test'",
+            "name": "启动backend",
             "type": "lldb",
             "request": "launch",
             "cargo": {
                 "args": [
                     "run",
-                    "--bin=axum-test"
+                    "--bin=RustGame-backend"
                 ]
             },
             "args": []
@@ -49,7 +49,7 @@
             "cargo": {
                 "args": [
                     "test",
-                    "--bin=axum-test"
+                    "--bin=RustGame-backend"
                 ]
             }
         }
