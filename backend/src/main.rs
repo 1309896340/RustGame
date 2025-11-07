@@ -3,6 +3,7 @@ use tokio;
 mod router;
 mod model;
 mod service;
+mod error;
 
 use router::construct_router;
 
